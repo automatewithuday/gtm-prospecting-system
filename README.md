@@ -120,15 +120,6 @@ It validates the run against the file contract and prints the stage funnel with 
 
 No keys at all? Stages 1–2, 9–16, and 18–20 run on your Claude subscription alone, and any list you already have can enter at stage 6 as a CSV. Prices, what each key unlocks, and how the spend cap behaves: [docs/COSTS-AND-KEYS.md](docs/COSTS-AND-KEYS.md).
 
-## Status
-
-Honest version. This is v0.1.
-
-- **Run live in the first test:** stages 1, 4, 8 and 9 through 16 (27 real leads from a GetLeads search, scored, ranked, segmented and drafted on a Claude subscription, $0 cash). That test found and fixed two gaps: unverified research signals and raw provider names reaching copy.
-- **Built, linted, not yet exercised end to end:** stages 3, 5, 6, 7 and 17 through 20. The engine behind stage 7 is production code from [GTM-Skills](https://github.com/automatewithuday/GTM-Skills); its wiring into this run folder is new.
-- **Known behavior:** on a cold list the absolute priority tiers bunch at the bottom; the ranking order is what to use. See the [FAQ](docs/FAQ.md).
-
-Issues and pull requests welcome.
 
 ## Layout
 
