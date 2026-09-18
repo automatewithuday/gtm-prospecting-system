@@ -98,7 +98,7 @@ def funnel(run: Path) -> None:
         # ponytail: "biggest drop" is a plain ratio; stages that are meant to cut hard (06, 07) will often win. Read it, don't obey it.
         if rin and rout is not None and rin >= 20 and (worst is None or rout / rin < worst[1]):
             worst = (key, rout / rin)
-    if worst:
+    if worst and worst[1] < 1:
         print(f"biggest drop: {worst[0]} keeps {worst[1]:.0%} of its input")
 
 

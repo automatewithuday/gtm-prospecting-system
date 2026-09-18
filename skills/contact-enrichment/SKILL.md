@@ -47,6 +47,7 @@ Both charge one plan credit per successful row. Check `get_fair_use` first on la
 1. Normalize both lanes to the lead columns. Build `lead_id`.
 2. Dedupe by `linkedin_url`, else `account_domain+first_name+last_name`. When the same person arrives from both lanes, keep ONE row, keep the audience `source_type` (it is the stronger evidence), and add the sources up in `source_count`.
 3. Drop `excluded_domains` and anyone on the do-not-contact list.
+4. **Clean names before anything is written to a person.** Provider names arrive as `Newtekone Nasdaq Newt`, `Performyard`, `Extensishr`. Add `company_name_clean` and `first_name_clean` using `references/company-name-cleaning.md` and `references/first-name-cleaning.md`. Stages 13–16 merge the clean columns, never the raw ones.
 
 ## Email verification — the send gate
 

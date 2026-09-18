@@ -16,6 +16,7 @@ metadata:
 
 - One row per signal, not per account. No signal found = no row. Never write a placeholder signal.
 - `event_date` is when it happened, `collected_date` is today. A signal without a `source_url` does not get written.
+- **Verify every signal before it is written — research sub-agents get this wrong.** In the first test run, 17 signals came back and 4 survived. For each one: fetch `source_url` and confirm it resolves (not 404, not an unrelated page); confirm the page is about THIS `account_domain` and not a same-named company (Array the fintech vs Array Technologies the solar firm; hellotilt.com vs tilt.app); confirm `event_date` is inside the window. A live job post with no posting date is recorded with `date_precision=observed`. A source that blocks fetching is kept out until a human opens it. Log every drop with its reason.
 - Cheap sources first: GetLeads MCP `list_funding_signals` / `list_acquisition_signals` (1 credit per record), then job boards and the company site.
 - Per-signal collection playbooks: `references/` (hiring surge, fundraising, new-in-role, tech on website, job-posting language, champion moves). Signal-to-message mapping: `references/trigger-mapping.md`.
 
