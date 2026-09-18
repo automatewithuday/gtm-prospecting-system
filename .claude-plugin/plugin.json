@@ -1,0 +1,8 @@
+{
+  "name": "prospecting-system",
+  "description": "Turn your 5 best customers into your next 500 prospects: 20 Claude skills and one orchestrator that run the full outbound workflow end to end, from customer patterns to weekly pipeline review.",
+  "version": "0.1.0",
+  "author": { "name": "Uday Kang", "url": "https://martechs.io" },
+  "license": "MIT",
+  "keywords": ["prospecting", "outbound", "icp", "lead-scoring", "cold-email", "linkedin", "getleads", "gtm", "sales"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "prospecting-system",
+  "owner": { "name": "Uday Kang", "url": "https://martechs.io" },
+  "metadata": { "description": "The Claude Prospecting System: 20 stage skills plus an orchestrator." },
+  "plugins": [
+    { "name": "prospecting-system", "source": "./", "description": "All 20 prospecting skills and the orchestrator.", "category": "productivity" }
+  ]
+}

@@ -1,0 +1,4 @@
+domain,company_name,deal_size,close_date,champion_title,source,notes
+example-one.com,Example One,24000,2026-02-10,VP Revenue Operations,referral,Replaced spreadsheets after Series A
+example-two.com,Example Two,18000,2026-03-22,Head of Growth,inbound,Came from a competitor's webinar
+example-three.com,Example Three,,,Director of Sales Ops,outbound,
