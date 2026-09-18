@@ -2,6 +2,10 @@
 
 **Turn your 5 best customers into your next 500 prospects.** 20 Claude skills and one orchestrator that run the whole outbound workflow end to end — from "who are our best customers, really?" to a weekly review of where the pipeline leaks.
 
+**Who it's for:** founders, SDR leaders, RevOps and agencies who run outbound and already use (or want to use) Claude Code. No coding needed to run it.
+
+**Docs:** [Getting started](docs/GETTING-STARTED.md) · [The 20 stages](docs/STAGES.md) · [Costs and keys](docs/COSTS-AND-KEYS.md) · [FAQ](docs/FAQ.md) · [Sample run](examples/sample-run/)
+
 Each skill does one job your team is doing by hand today. Together they are a single resumable run: every stage reads the previous stage's file and writes its own, with a spend cap and a human approval gate wherever a decision is yours.
 
 ```
@@ -29,7 +33,7 @@ Each skill does one job your team is doing by hand today. Together they are a si
 ## Quick start
 
 ```bash
-git clone https://github.com/automatewithuday/prospecting-system.git && cd prospecting-system
+git clone https://github.com/automatewithuday/gtm-prospecting-system.git && cd gtm-prospecting-system
 cp .env.example .env          # add your keys — see "What you need"
 claude
 ```
@@ -40,7 +44,9 @@ Then say:
 
 Claude asks six intake questions (customers, website, target count, **spend cap**, lanes, where the copy goes), creates `runs/<name>-<date>/`, and works through the stages, stopping at each gate for your approval. Stop any time; say "resume the run" later.
 
-Skills load automatically when you open the repo in Claude Code (`.claude/skills` points at `skills/`). To install them as a plugin instead: `/plugin marketplace add automatewithuday/prospecting-system`. Every skill also works on its own.
+The full walkthrough, including the 12 ICP interview questions Claude will ask you, is in [Getting started](docs/GETTING-STARTED.md).
+
+Skills load automatically when you open the repo in Claude Code (`.claude/skills` points at `skills/`). To install them as a plugin instead: `/plugin marketplace add automatewithuday/gtm-prospecting-system`. Every skill also works on its own.
 
 ## The 20 skills
 
@@ -67,6 +73,20 @@ Skills load automatically when you open the repo in Claude Code (`.claude/skills
 | 19 | [`account-notes`](skills/account-notes/SKILL.md) | A five-minute pre-call brief for sales, every claim sourced |
 | 20 | [`pipeline-review`](skills/pipeline-review/SKILL.md) | Weekly: where the workflow leaks, which segments and sources reply, what to change next |
 | ★ | [`prospecting-system`](skills/prospecting-system/SKILL.md) | The orchestrator: run folder, handoffs, spend cap, gates, resume |
+
+Per-stage detail (what it reads, writes, needs and where it stops for you): [docs/STAGES.md](docs/STAGES.md).
+
+## What you end up with
+
+After stage 16, in one folder:
+
+- `11-prioritized.csv` — every lead ranked, with fit, intent and engagement scores shown separately and the evidence for each
+- `09-signals.csv` — buying signals, each with a source link and a real date, verified before it was written
+- `12-segmented.csv` — leads grouped by why they would buy
+- `14-emails.csv`, `15-linkedin.csv`, `16-followups.csv` — first-touch email, LinkedIn note and DM, and the follow-up sequence, per lead
+- `state.json` — what ran, what it cost against your cap, and how many leads each stage kept
+
+See a filled-in example of every file in [examples/sample-run/](examples/sample-run/).
 
 ## How it behaves
 
@@ -98,7 +118,17 @@ It validates the run against the file contract and prints the stage funnel with 
 | Optional | DiscoLike, Blitz, Exa, Parallel, Smartlead keys — each stage degrades gracefully without them |
 | The run checker | [`uv`](https://docs.astral.sh/uv/) |
 
-No keys at all? Stages 1–2, 9–16, and 18–20 run on Claude alone, and any list you already have can enter at stage 6 as a CSV.
+No keys at all? Stages 1–2, 9–16, and 18–20 run on your Claude subscription alone, and any list you already have can enter at stage 6 as a CSV. Prices, what each key unlocks, and how the spend cap behaves: [docs/COSTS-AND-KEYS.md](docs/COSTS-AND-KEYS.md).
+
+## Status
+
+Honest version. This is v0.1.
+
+- **Run live in the first test:** stages 1, 4, 8 and 9 through 16 (27 real leads from a GetLeads search, scored, ranked, segmented and drafted on a Claude subscription, $0 cash). That test found and fixed two gaps: unverified research signals and raw provider names reaching copy.
+- **Built, linted, not yet exercised end to end:** stages 3, 5, 6, 7 and 17 through 20. The engine behind stage 7 is production code from [GTM-Skills](https://github.com/automatewithuday/GTM-Skills); its wiring into this run folder is new.
+- **Known behavior:** on a cold list the absolute priority tiers bunch at the bottom; the ranking order is what to use. See the [FAQ](docs/FAQ.md).
+
+Issues and pull requests welcome.
 
 ## Layout
 
@@ -106,7 +136,8 @@ No keys at all? Stages 1–2, 9–16, and 18–20 run on Claude alone, and any l
 skills/      the 20 stage skills + the orchestrator
 engine/      the list-building engine stages 7, 8 and 12 drive (scripts import each other — do not rename)
 scripts/     check_run.py (run validator + funnel), validate.sh (skill lint)
-examples/    a sample 00-customers.csv
+docs/        getting started, stage reference, costs and keys, FAQ
+examples/    a sample 00-customers.csv and a synthetic sample run you can validate
 runs/        your runs (git-ignored)
 ```
 

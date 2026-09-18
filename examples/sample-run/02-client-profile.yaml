@@ -1,0 +1,24 @@
+business:
+  name: Example Demand Co
+  website: https://example-demand.example
+  one_liner: Outsourced B2B demand generation
+  tone: peer-to-peer
+offer:
+  primary_cta: Reply if you want to see how the list gets built
+  lead_magnet: Signal-scored target account list for your ICP
+  value_prop: Reach the accounts already in market first
+icp_hard_filters:
+  job_titles: [VP Marketing, Head of Demand Generation, Chief Marketing Officer]
+  industries_in: [Software Development, Human Resources Services, Financial Services]
+  industries_out: []
+  headcount_min: 51
+  headcount_max: 500
+  countries: [US]
+  excluded_domains: [northwind-payroll.example, harbor-hr.example, ledgerline.example]
+icp_soft_preferences:
+  triggers: [new_segment_launch, hiring_demand_gen]
+  personas_to_prioritize: [Head of Demand Gen over CMO under 200 headcount]
+legal:
+  banned_words: []
+  regulated_industry: false
+created_at: 2026-01-15

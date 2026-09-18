@@ -1,0 +1,4 @@
+domain,company_name,deal_size,close_date,champion_title,source,notes
+northwind-payroll.example,Northwind Payroll,24000,2026-02-10,VP Marketing,referral,Launched a small-business tier
+harbor-hr.example,Harbor HR,18000,2026-03-22,Head of Demand Gen,outbound,Hiring SDRs at the time
+ledgerline.example,Ledgerline,,,CMO,inbound,

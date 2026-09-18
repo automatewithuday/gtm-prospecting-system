@@ -36,6 +36,7 @@ Works the same for competitor, tool, and event pages: each is a LinkedIn company
 1. `lookup_company_linkedin_followers` with the page URL and the ICP filters (`company_sizes`, `seniorities`, `countries` from `02-client-profile.yaml`). Free. Billing is on the requested count; non-matching leads are refunded after delivery.
 2. Show the human: follower count, price, and the run's remaining spend cap. **Ask how many followers to buy and which email receives the CSV.** Minimum order is 2,500 leads ($8.75); smaller pages are billed the minimum.
 3. Add the cost to `spent_usd` in `state.json`. If it would pass the cap, stop and ask.
+   Also call `get_wallet_balance`: if the purchase would drop the wallet below an enabled auto top-up threshold, tell the human the card will be charged the top-up amount as well. That charge is outside the run's cap.
 4. `prepare_company_followers_checkout` returns a payment link. **The human pays in the GetLeads app** — do not attempt checkout yourself.
 5. The CSV arrives by email. The human saves it to `05-audience-raw/`. Mark the stage `blocked` with note `waiting for follower CSV: <page>` until it lands, and carry on with the account lane (stages 3 and 7) meanwhile.
 

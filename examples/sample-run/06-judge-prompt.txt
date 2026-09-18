@@ -1,0 +1,3 @@
+Qualify: marketing or demand gen LEADER at a B2B payroll/HR/finance software company, 51-500 employees, US.
+Disqualify: interns, students, recruiters, agencies, consumer-only companies.
+Output: qualified true/false + one-sentence reason quoting the evidence.

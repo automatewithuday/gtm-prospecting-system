@@ -1,0 +1,4 @@
+lead_id,account_domain,company_name,first_name,last_name,title,linkedin_url,email,email_status,source_type,source_detail,source_count,qualified,judge_reason
+https://www.linkedin.com/in/ana-example,brightpay.example,BrightPay,Ana,Silva,VP Marketing,https://www.linkedin.com/in/ana-example,,,member,Payroll Marketers Slack (member export),1,true,VP Marketing at a payroll software vendor
+https://www.linkedin.com/in/raj-example,shiftboardly.example,Shiftboardly,Raj,Mehta,Head of Demand Generation,https://www.linkedin.com/in/raj-example,,,member,Payroll Marketers Slack (member export),1,true,Head of Demand Generation at a workforce scheduling SaaS
+https://www.linkedin.com/in/lee-example,ledgerworks.example,Ledgerworks,Lee,Park,Marketing Intern,https://www.linkedin.com/in/lee-example,,,member,Payroll Marketers Slack (member export),1,false,Intern: not a marketing leader

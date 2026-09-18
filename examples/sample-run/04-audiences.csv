@@ -1,0 +1,3 @@
+audience_type,name,url,linkedin_company_url,evidence,evidence_detail,follower_count,est_cost_usd,collection_method,selected
+competitor,Rival Demand Agency,https://rival-demand.example,https://www.linkedin.com/company/rival-demand-example/,customer,Harbor HR evaluated them before buying,4200,14.70,getleads_followers,false
+community,Payroll Marketers Slack,https://payroll-marketers.example,,customer,Northwind's champion is a member,,,csv_import,true

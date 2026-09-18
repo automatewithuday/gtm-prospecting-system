@@ -1,0 +1,128 @@
+{
+  "run": "sample-run",
+  "target_leads": 25,
+  "spend_cap_usd": 25,
+  "spent_usd": 0.02,
+  "stages": {
+    "01-customer-patterns": {
+      "status": "done",
+      "rows_in": 3,
+      "rows_out": 3,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "02-icp-definition": {
+      "status": "done",
+      "rows_in": 3,
+      "rows_out": 1,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": "confirmed by human"
+    },
+    "03-lookalike-research": {
+      "status": "skipped",
+      "note": "no DISCOLIKE_API_KEY in the sample"
+    },
+    "04-audience-discovery": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 1,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": "human picked the community, skipped the $14.70 page"
+    },
+    "05-follower-scrape": {
+      "status": "skipped",
+      "note": "CSV import only: member export saved to 05-audience-raw/ (not included in the sample)"
+    },
+    "06-audience-filter": {
+      "status": "done",
+      "rows_in": 3,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": "judge approved on first batch"
+    },
+    "07-targeted-search": {
+      "status": "skipped",
+      "note": "audience lane only"
+    },
+    "08-contact-enrichment": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0.02,
+      "finished_at": "2026-01-15",
+      "note": "1 valid, 1 catch-all (LinkedIn only)"
+    },
+    "09-buying-signals": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 1,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": "1 verified, 1 account with nothing found"
+    },
+    "10-lead-scoring": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "11-lead-prioritization": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "12-segmentation": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "13-personalization": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "14-cold-email": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "15-linkedin-outreach": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "16-follow-ups": {
+      "status": "done",
+      "rows_in": 2,
+      "rows_out": 2,
+      "cost_usd": 0,
+      "finished_at": "2026-01-15",
+      "note": ""
+    },
+    "17-reply-classification": {
+      "status": "pending",
+      "note": "after the human sends"
+    }
+  }
+}

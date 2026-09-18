@@ -1,0 +1,2 @@
+account_domain,signal_type,signal_detail,source_url,event_date,date_precision,collected_date,confidence
+brightpay.example,hiring,Open role: Demand Generation Manager,https://brightpay.example/careers/demand-generation-manager,2026-01-08,day,2026-01-15,high

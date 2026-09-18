@@ -17,6 +17,7 @@ metadata:
 - HOW to run it at volume: `references/subagent-pattern.md` — 1 lead, then batches of 10 with approval, then fan-out on Haiku sub-agents. Do not fan out before the human approves a batch.
 - Angle order: a dated signal from stage 9, then audience evidence (which page they follow, what they commented on), then segment-level bucket copy. Record which one was used in `angle_source`.
 - No evidence = bucket copy. Never invent a fact about a person or company.
+- Merge `company_name_clean` and `first_name_clean` from stage 8, never the raw provider names. Stages 14–16 inherit this.
 
 Files live in `runs/<run>/`. Column definitions: [`/prospecting-system`](../prospecting-system/SKILL.md). Standalone use: ignore this block.
 

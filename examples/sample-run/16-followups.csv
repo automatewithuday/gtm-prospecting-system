@@ -1,0 +1,3 @@
+segment,step,day_offset,channel,subject,body
+payroll-hr,2,3,email,(reply in thread),"{{first_name}}, one result for context, then a new angle. Want the short version of how the list gets built?"
+payroll-hr,3,9,email,(reply in thread),"{{first_name}}, last note from me. A one word no is all I need. Should I close the loop?"

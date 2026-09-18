@@ -1,0 +1,3 @@
+lead_id,account_domain,company_name,first_name,last_name,title,linkedin_url,email,email_status,source_type,source_detail,source_count,company_name_clean,first_name_clean
+https://www.linkedin.com/in/ana-example,brightpay.example,BrightPay,Ana,Silva,VP Marketing,https://www.linkedin.com/in/ana-example,ana@brightpay.example,valid,member,Payroll Marketers Slack (member export),1,BrightPay,Ana
+https://www.linkedin.com/in/raj-example,shiftboardly.example,Shiftboardly,Raj,Mehta,Head of Demand Generation,https://www.linkedin.com/in/raj-example,raj@shiftboardly.example,catch_all,member,Payroll Marketers Slack (member export),1,Shiftboardly,Raj
