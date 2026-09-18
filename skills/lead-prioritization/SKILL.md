@@ -18,7 +18,7 @@ metadata:
 - Keep the three component scores next to `priority_score` so anyone can see why a lead ranks where it does.
 - Rows with `screen=fail` are carried through unranked, not deleted.
 - Cap the outreach set here (default: top 500, or fewer if fewer qualify — never pad).
-- On a net-new cold list engagement is 0 and intent is thin, so the absolute tiers below bunch at the bottom (the first test run put every lead in P4). The ORDER is still valid: work from the top. Say this in the stage report; if the human wants cold-run thresholds, propose them, do not edit the tables.
+- On a net-new cold list engagement is 0 and intent is thin, so the absolute tiers below bunch at the bottom. The ORDER is still valid: work from the top. Say this in the stage report; if the human wants cold-run thresholds, propose them, do not edit the tables.
 
 Files live in `runs/<run>/`. Column definitions: [`/prospecting-system`](../prospecting-system/SKILL.md). Standalone use: ignore this block.
 

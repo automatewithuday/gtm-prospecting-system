@@ -20,7 +20,7 @@ Anything Claude does itself runs on your Claude subscription: customer patterns,
 
 Prices are what the providers quoted when this was written. Claude confirms the live price with the provider's own lookup before every purchase and shows it to you.
 
-A realistic small test: one follower page ($8.75) plus a few dozen enrichment credits. The first live test of this system pulled 27 leads with 27 GetLeads credits and no cash.
+A realistic small first run: one follower page ($8.75) plus a few dozen GetLeads plan credits for contacts. Everything from signals through copy then runs on your Claude subscription.
 
 ## Keys
 

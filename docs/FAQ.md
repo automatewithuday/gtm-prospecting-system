@@ -1,6 +1,6 @@
 # FAQ and troubleshooting
 
-Most of this comes from the first live test run of the system.
+The questions that come up most, and what to do about each.
 
 ## Setup
 
@@ -28,10 +28,10 @@ GetLeads emails the CSV after checkout. Stage 5 is marked `blocked` with the pag
 It needs `PROSPEO_API_KEY` and `OPENAI_API_KEY` in `.env`, plus Node.js 18+. Read `engine/list-builder/RUNBOOK.md`; re-running the same command resumes after any failure.
 
 **The judge rejected companies that are obviously fine.**
-That is what the 10-row approval loop in stage 6 is for. In our test the judge rejected restaurant software vendors as "not B2B software". The fix is one clearer sentence in the ICP ("vertical SaaS counts"), not editing rows. Fix the definition and re-run.
+That is what the 10-row approval loop in stage 6 is for. A typical case: the judge rejects restaurant software vendors as "not B2B software" because the ICP never said vertical SaaS counts. The fix is one clearer sentence in the ICP ("vertical SaaS counts"), not editing rows. Fix the definition and re-run.
 
 **Most of the signals Claude's researchers found were thrown away.**
-Expected, and deliberate. In our test 17 signals came back and 4 survived: some were older than the window, two were about a different company with the same name, two had dead or unrelated links. Stage 9 verifies every signal before writing it, and logs each drop with the reason. A false signal in a first line costs you more than no signal.
+Expected, and deliberate. Research agents routinely return signals that are older than the window, about a different company with the same name, or linked to dead or unrelated pages. Stage 9 verifies every signal before writing it, and logs each drop with the reason. A false signal in a first line costs you more than no signal.
 
 **Every lead came out as a low priority tier.**
 On a brand-new cold list, engagement is zero for everyone and intent data is thin, so absolute tier labels (P1 to P5) bunch at the bottom. The **order** is still meaningful: work the list from the top. Tiers spread out once replies and engagement start feeding back in. If you want different thresholds for cold runs, tell Claude and it will propose them for your approval.
@@ -50,8 +50,8 @@ No. Only `valid` (verifier-approved) addresses are send-ready. The others stay i
 **Could Claude overspend?**
 The cap in `state.json` is hard: every paid call is estimated and counted first, and Claude stops to ask rather than pass it. Purchases of follower lists also require you to pay by hand in the GetLeads app. The one thing outside the system's view is a provider-side setting such as a wallet auto top-up; Claude checks for it and warns you before a purchase that would trigger it.
 
-**What does a first test cost?**
-One follower page is $8.75 at the time of writing. Our first test pulled 27 well-matched leads using 27 GetLeads plan credits and no cash, then ran every stage through copy on the Claude subscription alone.
+**What does a small first run cost?**
+One follower page is $8.75 at the time of writing. A 25-lead pull from GetLeads contact search uses about 25 plan credits and no cash, and every stage from signals through copy runs on your Claude subscription alone.
 
 ## Changing things
 
